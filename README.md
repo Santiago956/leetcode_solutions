@@ -15,4 +15,4 @@ Cada arquivo contém:
 
 ## 🔗 Perfil
 
-Você pode encontrar meu perfil [aqui](https://leetcode.com/ppsantiago14).
+Você pode encontrar meu perfil do LeetCode [aqui](https://leetcode.com/ppsantiago14).
