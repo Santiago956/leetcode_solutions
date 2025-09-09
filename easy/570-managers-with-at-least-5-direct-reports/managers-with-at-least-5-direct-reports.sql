@@ -1,16 +1,8 @@
 -- Write your PostgreSQL query statement below
-WITH reports AS (
-    SELECT
-        managerId,
-        COUNT(managerId)
-    FROM Employee
-    WHERE managerId IS NOT NULL
-    GROUP BY managerId
-    HAVING COUNT(managerId) >= 5
-)
-
 SELECT 
-    name
-FROM Employee
-JOIN reports
-ON Employee.id = reports.managerId
+    e.name
+FROM Employee AS e
+JOIN Employee AS sub
+ON e.id = sub.managerId
+GROUP BY e.id, e.name
+HAVING COUNT(sub.id) >= 5
