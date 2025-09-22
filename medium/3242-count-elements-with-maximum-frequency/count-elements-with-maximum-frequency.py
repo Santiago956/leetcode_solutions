@@ -9,9 +9,5 @@ class Solution:
                 freq[num] += 1
         
         maxfreq = max(freq.values())
-
-        for frequency in freq.values():
-            if frequency == maxfreq:
-                qnt += frequency
-        return qnt
+        return sum(value for value in freq.values() if value == maxfreq)
 
